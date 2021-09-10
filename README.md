@@ -6,7 +6,7 @@ This repository was created in order to host a Spring REST API for benchmark tes
 
 This REST API was built in Java with Spring Boot to store data in a PostgreSQL database.
 
-The API was deployed on the Heroku platform and it provides a GET endpoint that returns a page of products. Before running requests to the API, you should consult its status by requesting it on https://rest-sp.herokuapp.com/actuator/health. It may take some seconds until the app returns "UP" status because it's hosted for free on Heroku. You will get a response like that:
+The API was deployed to the Heroku platform and it provides a GET endpoint that returns a page of products. Before running requests to the API, you should consult its status by requesting it on https://rest-sp.herokuapp.com/actuator/health. It may take some seconds until the app returns "UP" status because it's hosted for free to Heroku. You will get a response like that:
 
 ```
 HTTP/1.1 200 
@@ -69,7 +69,7 @@ Transfer-Encoding: chunked
 }
 ```
 
-You can make performance tests with your favorite benchmark tool and check how much time the app takes to respond to concurrent requests. I suggest you use the "ab" (ApacheBench) application on Unix-like systems. For instance, on Ubuntu 20, I use the following command to do that:
+You can make benchmark tests with your favorite benchmark tool and check how much time the app takes to respond to concurrent requests. I suggest you use the "ab" (ApacheBench) application on Unix-like systems. For instance, on Ubuntu 20, I use the following command to do that:
 
 :~$ ab -n 1000 -c 1000 https://rest-sp.herokuapp.com/api/v1/products
 With the above command, I make 1000 concurrent requisitions to the server.
